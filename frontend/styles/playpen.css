@@ -1,0 +1,81 @@
+.main-content{
+    display: grid;
+    grid-template-columns: 12em auto;
+    grid-template-rows: 2em auto;
+    grid-template-areas: "playpen-sidebar playpen-navbar"
+    "playpen-sidebar playpen-content";
+}
+
+.playpen-sidebar{
+    grid-area: playpen-sidebar;
+    background-color: #F0F1F4;
+    border: 1px solid #CAD6DF;
+}
+
+.playpen-sidebar-title{
+    font-weight: bold;
+    margin: 1em;
+    padding: 0;
+    display: block;
+}
+
+.playpen-container{
+}
+
+.playpen-navbar{
+    grid-area: playpen-navbar;
+    background-color: #F0F1F4;
+    border: 1px solid #CAD6DF;
+}
+
+.playpen-navbar-title{
+    font-weight: bold;
+    margin: 0 1em;
+    padding: 0;
+    display: inline-block;
+}
+
+.playpen-navbar-serverstop{
+    display: block;
+    cursor: pointer;
+    float: right;
+    margin: 0.5em;
+    background-color: red;
+    border: 1px lightgray solid;
+    height: 0.8em;
+    width: 0.8em;
+}
+
+.playpen-navbar-serverstop > span{
+
+}
+
+.playpen-content{
+    grid-area: playpen-content;
+    display: flex;
+    flex-direction: column;
+}
+
+.playpen-content.active{
+    background-color: black;
+    color: white;
+}
+
+.playpen-content-console{
+    display: flex;
+    flex-direction: column;
+    flex: 2 1 0; /* 2 - flex grow, 1 - flex shrink, 0 - flex basis */
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.playpen-content-console > span {
+    margin: 0 1em;
+}
+
+.playpen-content-field{
+    color: black;
+    border: #CAD6DF 1px solid;
+    padding: 0;
+    background-color: white;
+}
